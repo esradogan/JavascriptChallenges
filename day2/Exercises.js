@@ -209,12 +209,28 @@ console.log(string10.match(/because/gi).length);
 
 const sentence =
 	'%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching';
-let arraySen = sentence.split(' ').map((s) => s.split(/\W+/gi).join(''));
+let arraySen = sentence.split(' ').map((s) => s.split(/\W+/gi).join('')).sort();
+
+console.log(arraySen)
 for (let index = 0; index < arraySen.length; index++) {
 	const element = arraySen[index];
+	console.log(element)
 }
 
-//int[] dizi = {1,2,3,4,5,10,7,70,70,3,47,5,5,5};
-//var dizi2 = dizi.GroupBy(d=>d).OrderByDescending(g=>g.Count()).First().Key.Dump();
+arraySen.reduce(d => d)
+console.log(arraySen)
 
-// Calculate the total annual income of the person by extract the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+// Calculate the total annual income of the person by extract the numbers from the following text. 
+//'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+
+const sentence2 = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+let arraySen2 = sentence2.split(',').map((s) => s.split(/[^0-9]/gi).join(''));
+let toplam = 0;
+for (let index = 0; index < arraySen2.length; index++) {
+	let element = arraySen2[index];
+
+	let element2 = parseInt(element);
+	toplam += element2
+}
+
+console.log(toplam)	
