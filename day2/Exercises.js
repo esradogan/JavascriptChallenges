@@ -228,7 +228,6 @@ let arraySen2 = sentence2.split(',').map((s) => s.split(/[^0-9]/gi).join(''));
 let toplam = 0;
 for (let index = 0; index < arraySen2.length; index++) {
 	let element = arraySen2[index];
-
 	let element2 = parseInt(element);
 	toplam += element2
 }
