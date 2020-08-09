@@ -70,12 +70,117 @@ if (note >= 50 && note <= 59)
 if (note >= 0 && note <= 49)
     alert('F')
 
- // Check if the season is Autumn, Winter, Spring or Summer. If the user input is:
+// Check if the season is Autumn, Winter, Spring or Summer. If the user input is:
 
 // September, October or November, the season is Autumn.
 // December, January or February, the season is Winter.
 // March, April or May, the season is Spring
 // June, July or August, the season is Summer
 
+let month = prompt('Enter a month');
+switch (month) {
+    case ('September'): alert('The season is Autumn');
+        break;
+    case ('October'): alert('The season is Autumn');
+        break;
+    case ('November'): alert('The season is Autumn');
+        break;
+    case ('December'): alert('The season is Winter');
+        break;
+    case ('January'): alert('The season is Winter');
+        break;
+    case ('February'): alert('The season is Winter');
+        break;
+    case ('March'): alert('The season is Spring');
+        break;
+    case ('April'): alert('The season is Spring');
+        break;
+    case ('May'): alert('The season is Spring');
+        break;
+    case ('June'): alert('The season is Summer');
+        break;
+    case ('July'): alert('The season is Summer');
+        break;
+    case ('August'): alert('The season is Summer');
+        break;
+    default: alert('It is not a month please try again');
+}
 
+// Check if a day is weekend day or a working day. Your script will take day as an input.
+//     What is the day  today? Saturday
+//     Saturday is a weekend.
+
+//     What is the day today? saturDaY
+//     Saturday is a weekend.
+
+//     What is the day today? Friday
+//     Friday is a working day.
+
+//     What is the day today? FrIDAy
+//     Friday is a working day.
+
+let day = String(prompt('Enter a day'));
+let convertedDay = day.toLowerCase();
+
+switch (convertedDay) {
+    case ('sunday'): alert('Sunday is a weekend');
+        break;
+    case ('saturday'): alert('Saturday is a weekend');
+        break;
+    case ('friday'): alert('Friday is a working day.');
+        break;
+    case ('thursday'): alert('Thursday is a working day.');
+        break;
+    case ('wednesday'): alert('Wednesday is a working day.');
+        break;
+    case ('tuesday'): alert('Tuesday is a working day.');
+        break;
+    case ('monday'): alert('Monday is a working day.');
+        break;
+    default: alert('It is not a day, please try again');
+}
+
+// Write a program which tells the number of days in a month.
+//   Enter a month: January
+//   January has 31 days.
+
+//   Enter a month: JANUARY
+//   January has 31 day
+
+//   Enter a month: February
+//   February has 28 days.
+
+//   Enter a month: FEbruary
+//   February has 28 days.
+
+let month = String(prompt('Enter a month'));
+let convertedMonth = month.toLowerCase();
+
+switch (convertedMonth) {
+    case ('january'): alert(' January has 31 days');
+        break;
+    case ('february'): alert('February has 28 days.');
+        break;
+    case ('march'): alert('March has 31 days.');
+        break;
+    case ('april'): alert('April has 30 days.');
+        break;
+    case ('may'): alert('May has 31 days.');
+        break;
+    case ('june'): alert('June has 30 days.');
+        break;
+    case ('july'): alert('July has 31 days.');
+        break;
+    case ('august'): alert('August has 31 days.');
+        break;
+    case ('september'): alert('September has 30 days.');
+        break;
+    case ('october'): alert('October has 31 days.');
+        break;
+    case ('november'): alert('November has 30 days.');
+        break;
+    case ('december'): alert('December has 31 days.');
+        break;
+    default: alert('It is not a month, please try again');
+}
 
